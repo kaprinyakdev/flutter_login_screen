@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_screen/home_screen.dart';
 
 class Background extends StatelessWidget {
+
+  String username;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,8 +17,15 @@ class Background extends StatelessWidget {
               // TEXT - felhasználónév
               Container(
                 alignment: Alignment.center,
+                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                height: 100,
+                width: 100,
+                child: Image.asset('assets/icon.png')
+              ),
+              Container(
+                alignment: Alignment.center,
                 padding:
-                    EdgeInsets.fromLTRB(0, 100, 0, 0), // EdgeInsets.all(20),
+                    EdgeInsets.fromLTRB(0, 50, 0, 0), // EdgeInsets.all(20),
                 child: Text(
                   'Felhasználónév',
                   style: TextStyle(
@@ -29,6 +40,10 @@ class Background extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                   width: 2000,
                   child: TextField(
+                    textAlign: TextAlign.center,
+                    onChanged: (text){
+                        username = text;
+                    } ,
                     decoration: InputDecoration(
                         hintText: 'Kérem a felhasználónevet',
                         hintStyle: TextStyle(
@@ -52,6 +67,7 @@ class Background extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: TextField(
+                    textAlign: TextAlign.center,
                     decoration: InputDecoration(
                         hintText: 'Kérem a jelszót',
                         hintStyle: TextStyle(
@@ -66,7 +82,7 @@ class Background extends StatelessWidget {
                     minWidth: 150,
                     height: 60,
                     child: RaisedButton(
-                      onPressed: null,
+                      onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => homeScreen(username))),
                       child: Text(
                         'Bejelentkezés',
                         style: TextStyle(
