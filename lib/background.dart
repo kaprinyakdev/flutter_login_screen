@@ -25,7 +25,7 @@ class Background extends StatelessWidget {
               Container(
                 alignment: Alignment.center,
                 padding:
-                    EdgeInsets.fromLTRB(0, 50, 0, 0), // EdgeInsets.all(20),
+                    EdgeInsets.fromLTRB(0, 100, 0, 0), // EdgeInsets.all(20),
                 child: Text(
                   'Felhasználónév',
                   style: TextStyle(
@@ -37,8 +37,8 @@ class Background extends StatelessWidget {
               ),
               Container(
                   alignment: Alignment.centerRight,
-                  padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                  width: 2000,
+                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  width: 10,
                   child: TextField(
                     textAlign: TextAlign.center,
                     onChanged: (text){
@@ -65,7 +65,7 @@ class Background extends StatelessWidget {
                   )),
               Container(
                   alignment: Alignment.centerRight,
-                  padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: TextField(
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
