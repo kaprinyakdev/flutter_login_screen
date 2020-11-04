@@ -38,19 +38,19 @@ class Background extends StatelessWidget {
               Container(
                   alignment: Alignment.centerRight,
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  width: 10,
+                  width: 100,
                   child: TextField(
                     textAlign: TextAlign.center,
                     onChanged: (text){
                         username = text;
                     } ,
-                    decoration: InputDecoration(
+                    /*decoration: InputDecoration(
                         hintText: 'Kérem a felhasználónevet',
                         hintStyle: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w200,
                           fontSize: 20,
-                        )),
+                        )),*/
                   )),
               Container(
                   alignment: Alignment.center,
@@ -68,12 +68,12 @@ class Background extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: TextField(
                     textAlign: TextAlign.center,
-                    decoration: InputDecoration(
+                    /*decoration: InputDecoration(
                         hintText: 'Kérem a jelszót',
                         hintStyle: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w200,
-                            fontSize: 20)),
+                            fontSize: 20)),*/
                   )),
               Container(
                   alignment: Alignment.center,

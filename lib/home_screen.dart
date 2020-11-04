@@ -1,19 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class homeScreen extends StatelessWidget {
+import 'PlaceholderWidget.dart';
+
+class homeScreen extends StatefulWidget {
   String name;
 
   homeScreen(String nameValue) {
     this.name = nameValue;
   }
 
-  @override
+   @override
+  _HomePageState createState() => _HomePageState();
+
+}
+
+
+  class _HomePageState extends State<homeScreen>{
+  
+  int _currentindex = 0;
+
+  final List<Widget> _children = [
+   PlaceholderWidget(Colors.white),
+   PlaceholderWidget(Colors.deepOrange),
+   PlaceholderWidget(Colors.green)
+ ];
+
   Widget build(BuildContext context) {
     return Scaffold(
       //appBar: AppBar(backgroundColor: Colors.black, title: Text(name)),
+      body: _children[_currentindex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
+        onTap: (value) {
+          setState(() => _currentindex = value);
+          
+        },        
+        currentIndex: _currentindex,
         items: [
           BottomNavigationBarItem(
               icon: new Icon(Icons.menu), title: new Text('menü')),
@@ -26,3 +48,4 @@ class homeScreen extends StatelessWidget {
     );
   }
 }
+ 

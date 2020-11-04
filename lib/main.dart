@@ -7,6 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     ]);
 
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Materialapp',
         theme: ThemeData(primarySwatch: Colors.blue),
         home: HomePage(title: 'title'));
@@ -30,13 +32,15 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.green,
+    return Scaffold( backgroundColor: Colors.green,
       body: Stack(
         children: <Widget>[Background()],
-      ),
+      )
     );
   }
 }
