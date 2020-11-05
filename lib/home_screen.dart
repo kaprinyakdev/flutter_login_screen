@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_login_screen/settings.dart';
 
 import 'PlaceholderWidget.dart';
 
@@ -21,6 +22,7 @@ class homeScreen extends StatefulWidget {
   int _currentindex = 0;
 
   final List<Widget> _children = [
+    Settings(),
    PlaceholderWidget(Colors.white),
    PlaceholderWidget(Colors.deepOrange),
    PlaceholderWidget(Colors.green)
