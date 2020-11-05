@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_login_screen/mytodos.dart';
 import 'package:flutter_login_screen/settings.dart';
-
 import 'PlaceholderWidget.dart';
 
 class homeScreen extends StatefulWidget {
@@ -23,6 +23,7 @@ class homeScreen extends StatefulWidget {
 
   final List<Widget> _children = [
     Settings(),
+    MyTodos(),
    PlaceholderWidget(Colors.white),
    PlaceholderWidget(Colors.deepOrange),
    PlaceholderWidget(Colors.green)
@@ -40,11 +41,11 @@ class homeScreen extends StatefulWidget {
         currentIndex: _currentindex,
         items: [
           BottomNavigationBarItem(
-              icon: new Icon(Icons.menu), title: new Text('menü')),
+              icon: new Icon(Icons.people), title: new Text('My profile')),
           BottomNavigationBarItem(
-              icon: new Icon(Icons.message), title: new Text('üzenetek')),
+              icon: new Icon(Icons.today), title: new Text('My Todos')),
           BottomNavigationBarItem(
-              icon: new Icon(Icons.person), title: new Text('profile'))
+              icon: new Icon(Icons.settings), title: new Text('Settings'))
         ],
       ),
     );

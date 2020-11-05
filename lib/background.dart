@@ -3,7 +3,7 @@ import 'package:flutter_login_screen/home_screen.dart';
 
 class Background extends StatelessWidget {
 
-  String username;
+  String username = "";
 
   @override
   Widget build(BuildContext context) {

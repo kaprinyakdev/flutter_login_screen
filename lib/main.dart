@@ -7,6 +7,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+  bool isDarkModeOn = false;
   
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( backgroundColor: Colors.green,
+    return Scaffold(backgroundColor: Colors.green,
       body: Stack(
         children: <Widget>[Background()],
       )
